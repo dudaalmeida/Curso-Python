@@ -58,3 +58,7 @@ for indice, nome in enumerate(lista4):
 
 n1, n2, n3 = lista4 # Desempacotamento de lista
 print(n1)
+
+for n, nome in enumerate(lista4, 50):  ## Agora não parece com os indices e manipulei para começar em 50
+    print(n,nome)
+
