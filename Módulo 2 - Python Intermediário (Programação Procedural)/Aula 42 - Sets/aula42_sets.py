@@ -13,9 +13,6 @@ symmetric_difference ^ (Elementos que estão nos dois sets, mas não em ambos)
 # Sets são conjuntos em inglês
 # Os sets não possuem índices, de forma que não dá para acessar os valores diretamente do set
 
-from traceback import print_tb
-
-
 s1 = {1,2,3,4,5,6}
 
 for v in s1:  # Ainda é possível iterar sobre os sets, mas não acessá-los diretamente
@@ -24,9 +21,9 @@ for v in s1:  # Ainda é possível iterar sobre os sets, mas não acessá-los di
 # Se declarar dessa forma: s2 = {}, você não estará criando um set mas sim um dicionário
 # Assim, outra forma de criar um set é
 
-s2 = set()  # Assim cria um set vazio
-s2.add(1)   # Adiciona o elemento '1' no set
-s2.add(100)
+s2 = set()   # Assim cria um set vazio
+s2.add(1)    # Adiciona o elemento '1' no set
+s2.add(100)  # O número é adicionado sem perder a ordem, não fica numa posição aleatória dentro do set 
 s2.add((4,5,6))
 
 s2.discard(100)  # Descarta o elemento '100' do set
