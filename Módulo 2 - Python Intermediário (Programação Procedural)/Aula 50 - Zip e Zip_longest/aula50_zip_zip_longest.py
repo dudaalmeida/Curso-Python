@@ -8,7 +8,7 @@ indice = count()
 cidades = ['São Paulo','Belo Horizonte','Salvador','Monte Belo', 'Outra']
 estados = ['SP','MG','BA']
 
-cidades_estados = zip(estados,cidades)  # Junta as duas listas em uma única tupla, em um gerador
+cidades_estados = zip(estados,cidades)  # Junta as duas listas em uma única tupla, retornando um iterador que possui um next()
 print(cidades_estados)  # Dessa forma só aparecec o endereço na memória
 #print(list(cidades_estados))
 #print(dict(cidades_estados))
@@ -28,7 +28,7 @@ cidades_estados2 = zip_longest(
 
 #print(list(cidades_estados2))
 
-# Dessa maneira, o código entrará num loop infinito pois o gerador count não irá parar de contar e o zip_longest inclui tudo
+# Dessa maneira, o código entrará num loop infinito pois o iterador count não irá parar de contar e o zip_longest inclui tudo
 #for indice, estado, cidade in cidades_estados2:
 #    print(indice,estado,cidade)
 
@@ -42,3 +42,14 @@ cidades_estados3 =  zip(
 
 for indice, estado, cidade in cidades_estados3:
     print(indice,estado,cidade)
+
+from types import GeneratorType
+variavel = zip('Alô', 'Alô')  # Retorna um iterador
+print(isinstance(variavel, GeneratorType))  # Verificando se é um gerador
+print(list(variavel))
+
+# Para ser um gerador, deveria ser da seguinte forma
+variavel2 = ((x,y) for x,y in zip('Alô','Alô'))
+print(isinstance(variavel2, GeneratorType))  
+print(list(variavel2))
+
