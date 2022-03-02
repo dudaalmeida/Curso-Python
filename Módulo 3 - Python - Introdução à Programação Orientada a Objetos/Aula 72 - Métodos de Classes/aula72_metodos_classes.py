@@ -13,6 +13,7 @@ class Pessoa:
     def por_ano_nascimento(cls, nome, ano_nascimento):  # Criei um método que é um método de classe e retorna a própria classe, porém agora com nome e idade com base nos parâmetros enviados
         idade = cls.ano_atual - ano_nascimento
         return cls(nome, idade)
+    # O método de classe não precisa da instância, mas da classe em si
 
 p1 = Pessoa('Eduarda', 21)  # Método de Instância
 p2 = Pessoa.por_ano_nascimento('João', 1997)  # Através do Método de Classe, o objeto é fabricado
