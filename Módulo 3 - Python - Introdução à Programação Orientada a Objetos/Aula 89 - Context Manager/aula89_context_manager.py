@@ -29,4 +29,4 @@ class Arquivo:
 
 with Arquivo('abc.txt','w') as arquivo:
     arquivo.write('Alguma coisa.')
-    #arquivo.asasasasd('Alguma coisa.')
+    #arquivo.asasasasd('Alguma coisa.') 
