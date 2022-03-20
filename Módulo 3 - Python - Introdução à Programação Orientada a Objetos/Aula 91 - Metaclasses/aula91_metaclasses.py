@@ -1,6 +1,6 @@
 """
 EM PYTHON TUDO É UM OBJETO: incluindo classes
-Metaclasses são as 'classes' que criam classes
+Metaclasses são as 'classes' que criam classes -  São utilizadas para alterar o comportamento de classes
 type é uma metaclasse
 
 É util em Frameworks ou Design Paterns
