@@ -19,13 +19,13 @@ class Arquivo:
         print('Retornando arquivo')
         return self.arquivo
 
-    def __exit__(self, exc_type, exc_val, exc_tb):  # As últimas 3 variáveis só serão utilizadas no caso de uma excessão
+    def __exit__(self, exc_type, exc_val, exc_tb):  # As últimas 3 variáveis só serão utilizadas no caso de uma exceção
         print('Fechando arquivo')
         self.arquivo.close()
-        print(exc_type)  # Tipo da excessão
+        print(exc_type)  # Tipo da exceção
         print(exc_val)   # O valor que estamos trabalhando
-        print(exc_tb)    # O traceback da excessão
-        return True      # A excessão não será levantada -> Mas se deve tratar a excessão
+        print(exc_tb)    # O traceback da exceção
+        return True      # A exceção não será levantada -> Mas se deve tratar a exceção
 
 with Arquivo('abc.txt','w') as arquivo:
     arquivo.write('Alguma coisa.')
