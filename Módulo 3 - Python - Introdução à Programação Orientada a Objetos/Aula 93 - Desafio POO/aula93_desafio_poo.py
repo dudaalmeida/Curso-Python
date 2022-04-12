@@ -62,4 +62,3 @@ if banco.autenticar(cliente3):
 else:
     print('Cliente não autenticado.')
 
-
